@@ -13,12 +13,6 @@ public interface UserMapper {
     @Select("SELECT * FROM USERS WHERE username = #{username}")
     User getUser(String username);
 
-    @Select("SELECT * FROM USERS")
-    List<User> findAll();
-
-    @Select("SELECT * FROM USERS WHERE userid = #{userid}")
-    User findById(Integer userid);
-
     @Select("SELECT * FROM USERS WHERE username = #{username}")
     User findByUsername(String username);
 

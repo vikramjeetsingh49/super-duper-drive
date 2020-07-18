@@ -7,8 +7,6 @@ import java.util.List;
 
 @Mapper
 public interface NotesMapper {
-    @Select("SELECT * FROM NOTES WHERE noteid = #{noteid}")
-    Notes findById(Integer noteid);
 
     @Select("SELECT * FROM NOTES WHERE userid = #{userid}")
     List<Notes> findByUserId(Integer userid);
